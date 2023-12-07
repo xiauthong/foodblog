@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/722e303770.js" crossorigin="anonymous"></script>
+
+    <title>Hello, world!</title>
+  </head>
+<style>
+
+
+    .mySlides{
+        display: none;
+    }
+
+   
+
+
+    /*slideshow container*/
+    .slideshow-container{
+        width: 100%;
+        position: relative;
+        margin: auto;
+  
+    }
+
+    /*Caption text*/
+    .captiontext{
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext{
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* the dots */
+    .dot{
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active{
+        background-color: #717171;
+    }
+
+    /* fading animation */
+    .fade{
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade{
+        from{opacity: 4;}
+        to{opacity: 1;}
+    }
+
+    body{
+        background-color: rgb(247, 236, 236);
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+
+    header{
+        background-color:rgba(60, 86, 39, 0.61);
+        width: 100%;
+        height: 250px;
+       
+    }
+
+    header i{
+        font-size: 70px;
+        margin-top: 30px;
+        margin-left: 650px;
+        color:rgb(247, 236, 236);
+       
+    }
+
+    header h2{
+        margin-left: 380px;
+        margin-top: 15px;
+        font-weight: bolder;
+        color:rgb(247, 236, 236);
+    }
+       
+    .topnav{
+    
+        margin-left: 350px;
+        margin-top: 0px;
+
+     
+      
+    }
+
+    .topnav a{
+      
+        display: inline-block;
+        color:rgb(247, 236, 236);
+        text-align: center;
+        padding: 17px 16px;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    .topnav a:hover{
+        color: yellow;
+    }
+
+    .topnav .icon{
+        display: none;
+    }
+
+
+    .container,.container1{
+        display: flex;
+    }
+
+    .pizza{
+        margin-left: 0;
+    }
+
+    .pizza img{
+        width: 100%;
+        height: 500px;
+    }
+
+    .pizza h1{
+        margin-left: 45px;
+        margin-top: 20px;
+        font-weight: bolder;
+        color: rgba(60, 86, 39, 0.61);
+        font-size: 40px;
+       
+    }
+
+    .btn{
+        margin-left: 570px;
+        margin-top: 15px;
+        width: 240px;
+        height: 70px;
+        background-color: rgb(247, 236, 236);
+        color:  rgba(60, 86, 39, 0.61);
+        font-size: 30px;
+        border-radius: 50px;
+        border: solid 2px  rgba(60, 86, 39, 0.61);
+    }
+
+    .btn:hover{
+        border-radius: 0px;
+        background-color: rgba(60, 86, 39, 0.61);
+        color: rgb(247, 236, 236) ;
+    }
+
+    .aboutus{
+        margin-left: 10px;
+        margin-top: 130px;
+    }
+
+    .aboutus img{
+        width: 500px;
+        height: 540px;
+        border-radius: 50px;
+    }
+
+    .aboutdetail{
+        margin-left: 200px;
+        margin-top: 100px;
+      
+    }
+
+    .aboutdetail h2{
+        font-size: 70px;
+        font-weight: bolder;
+        color: rgba(60, 86, 39, 0.61);
+
+    }
+
+    .aboutdetail p{
+        color: rgba(60, 86, 39, 0.61); 
+    }
+
+    .btn1{
+
+        width: 240px;
+        height: 70px;
+        background-color: rgb(247, 236, 236);
+        color:  rgba(60, 86, 39, 0.61);
+        font-size: 30px;
+        border-radius: 50px;
+        border: solid 2px  rgba(60, 86, 39, 0.61);
+    }
+
+    .btn1:hover{
+        border-radius: 0px;
+        background-color: rgba(60, 86, 39, 0.61);
+        color: rgb(247, 236, 236) ;
+    }
+
+    span{
+        color: rgba(60, 86, 39, 0.61) ;
+        font-size: 45px;
+    }
+
+    .tittle{
+        margin-left: 500px;
+        margin-top: 50px;
+    }
+
+    .tittle h1{
+        font-weight: bolder;
+        font-size: 50px;
+
+    }
+
+    .line{
+        height: 2px;
+        width: 100%;
+        color: grey;
+        border: 2px dashed grey;
+        margin-top: 20px;
+        margin-left: -15px;
+
+    }
+
+    .category{
+        text-align: center;
+      
+    }
+
+    .btn2{
+        width: 180px;
+        height: 50px;
+        background-color: rgb(247, 236, 236);
+        color:  rgba(60, 86, 39, 0.61);
+        font-size: 30px;
+        border-radius: 50px;
+        border: solid 2px  rgba(60, 86, 39, 0.61);
+        margin-top: 20px;
+        margin-left: 120px;
+    }
+
+    .btn2:hover{
+        border-radius: 0px;
+        background-color: rgba(60, 86, 39, 0.61);
+        color: rgb(247, 236, 236) ;
+    }
+
+
+
+    .sandwith{
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+
+    .sandwith img{
+        width: 500px;
+        height: 400px;
+        border: 20px rgb(247, 236, 236) solid;
+        box-shadow: 0 0 10px rgba(2, 2, 2, 0.5); 
+        transition: 0.3s;
+    }
+
+    .sandwith img:hover{
+        opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    .modal{
+        display: none;/* Hidden by default */
+        position: fixed; /* stay in place */
+        z-index: 1; /*sit on top*/
+        padding-top: 100px; /*location of the box*/
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0,0,0,0.9);
+    }
+
+    /*modal content (image)*/
+    .modal-content{
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /*caption of modal image*/
+    #caption{
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /*add animation*/
+    .modal-content, #caption{
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom{
+        from{-webkit-transform: scale(0)}
+        to{-webkit-transform: scale(1)}
+    }
+
+    @keyframes zoom{
+       from{transform: scale(0)}
+       to{transform: scale(1)}
+    }
+
+    /*the close button*/
+    .close{
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transform: 0.3s;
+    }
+
+    .close:hover,.close:focus{
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .menu{
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+
+    .menu h2,p{
+        color:  rgba(60, 86, 39, 0.61);
+    }
+
+    .foodbox{
+        height: 490px;
+        width: 420px;
+        background-color: rgb(232, 224, 194);
+        margin-top: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(2, 2, 2, 0.5); 
+        margin-left: 80px;
+        text-align: center;
+        transition: transform .2s;
+    }
+
+    .foodbox:hover{
+        -ms-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    .foodbox img{
+        width: 400px;
+        height: 280px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .foodbox h3{
+   
+        margin-top: 10px;
+        font-weight: bolder;
+    }
+
+    .star{
+        margin-top: 10px;
+    }
+
+    .foodbox h4{
+        margin-top: 10px;
+    }
+
+    .btn3{
+        width: 180px;
+        height: 50px;
+        background-color: rgb(232, 224, 194);
+        color: black;
+        font-size: 20px;
+        border-radius: 50px;
+        border: solid 2px  black;
+        margin-top: 10px;
+     
+    }
+
+    .btn3:hover{
+        color: rgb(232, 224, 194) ;
+        background-color: black;
+    }
+
+    .galleryimage{
+        margin-top: 50px;
+        margin-left: 20px;
+        position: relative;
+    }
+
+    .galleryimage img{
+        width: 350px;
+        height: 250px;
+    }
+
+    .overlay{
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .galleryimage:hover .overlay{
+        bottom: 0;
+        height: 100%;
+        opacity: 0.4;
+    }
+
+    .text{
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    .orderform{
+        background-color: rgb(247, 236, 236);
+        width: 75%;
+        height: 600px;
+        box-shadow: 0 0 10px rgba(2, 2, 2, 0.5); 
+        margin-top: 50px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+    }
+
+    .box{
+        margin-left: 30px;
+        margin-top: 30px;
+        height: 50px;
+        width: 85%;
+        background-color: rgb(233, 225, 225);
+        color: rgb(98, 98, 98);
+        border: none;
+        padding-left: 20px;
+    }
+
+    textarea {
+        width: 85%;
+        margin-left: 30px;
+        margin-top: 30px;
+        height: 150px;
+        background-color: rgb(233, 225, 225);
+        color: rgb(98, 98, 98);
+        padding-left:20px ;
+        border: none;
+        padding-top: 20px;
+    }
+
+
+    .btn4{
+        width: 200px;
+        height: 50px;
+        background-color: #000000;
+        color: #ddd;
+        margin-top: 20px;
+        margin-left: 30px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .btn4:hover{
+        background-color: #999999;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    .orderimage{
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+    .orderimage img{
+        width: 100%;
+        height: 600px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 0 10px rgba(2, 2, 2, 0.5); 
+    }
+
+    footer{
+        height: 400px;
+        background-color: #373434;
+        margin-top: 20px;
+
+    }
+
+    .footerbox{
+        margin-top: 80px;
+        margin-left: 100px;
+    }
+
+    .footerbox h3{
+        color: white;
+        font-weight: bolder;
+    }
+
+    .footerbox p{
+        color: white;
+        padding-top: 0px;
+    }
+
+    .footerbox a{
+        color: white;
+        text-decoration: none;
+        padding-top: 100px;
+    }
+
+    .line1{
+        background-color: white;
+        width: 95%;
+        height: 2px;
+        margin-top: 20px;
+        margin-left: 30px;
+
+    }
+
+    .copyright{
+        margin-top: 20px;
+        margin-left: 100px;
+        text-align: center;
+    }
+
+    .copyright p{
+        font-size: 20px;
+        color: white;
+        
+    }
+
+     /*mobile size*/
+     @media screen and (max-width:600px) {
+
+        .header{
+            width: 100%;
+            
+        }
+
+        header i{
+        font-size: 50px;
+        margin-left: 230px;
+      
+       }
+
+       header h2{
+        margin-left: 50px;
+        font-size: 20px;
+        margin-top: 35px;
+       
+    }
+
+    .topnav{
+    
+    margin-left: 20px;
+    margin-top: 35px;
+   
+
+    }
+
+    .topnav a{
+      
+      font-size: 15px;
+  }
+
+  .pizza img{
+        width: 100%;
+        height: 350px;
+    }
+
+    .pizza h1{
+        margin-left: 15px;
+        font-size: 20px;
+       
+    }
+
+    .btn{
+        margin-left: 170px;
+        width: 200px;
+        height: 70px;
+        font-size: 20px;
+     
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutus img{
+        display: none;
+    }
+
+    .aboutdetail{
+        margin-left: 0;
+        margin-top: 0;
+      
+    }
+
+    .aboutdetail h2{
+        margin-left: 0;
+        margin-top: 0;
+
+    }
+
+    .tittle{
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    .tittle h1{
+        font-size: 35px;
+
+    }
+
+    .sandwith img{
+        width: 400px;
+        height: 250px;
+       
+    }
+
+    .menu{
+       
+        margin-left: 17px;
+    }
+
+    .foodbox{
+        height: 390px;
+        width: 320px;
+        margin-left: 90px;
+    }
+
+    .foodbox img{
+        width: 300px;
+        height: 200px;
+    
+    }
+
+    .btn3{
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-top: 0px;
+     
+    }
+
+
+    .overlay{
+        
+        width: 350px;
+        
+    }
+
+    .galleryimage{
+      
+        margin-left: 67px;
+      
+    }
+
+
+    .orderform{
+       
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .orderimage img{
+        display: none;
+    }
+
+    footer{
+        width: 100%;
+     
+
+    }
+
+    .footerbox{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+
+    .footerbox h3{
+        font-size: 15px;
+    }
+
+    .footerbox a{
+        font-size: 9px;
+    }
+
+    .line1{
+        margin-left: 12px;
+
+    }
+
+    .copyright{
+       
+        margin-left: 10px;
+      
+    }
+
+    .copyright p{
+        font-size: 15px;
+       
+        
+    }
+
+    
+
+   
+  
+
+
+
+
+
+
+
+     }
+
+
+     /*Tablet size*/
+     @media screen and (min-width:600px) and (max-width:800px){
+
+        header{
+            width: 100%;
+       
+            
+        }
+
+        header i{
+        font-size: 50px;
+        margin-left: 370px;
+      
+       }
+
+       header h2{
+        margin-left: 120px;
+        margin-top: 30px;
+       
+    }
+
+    .topnav{
+    
+    margin-left: 70px;
+  
+   
+
+    }
+
+    .btn{
+        width: 90%;
+        margin-left: 50px;
+     
+    }
+
+    .pizza h1{
+        width: 100%;
+        font-size: 30px;
+        margin-left: 10px;
+       
+    }
+
+    .aboutus{
+        margin-left: -70px;
+        width: 50%;
+      
+    }
+
+    .aboutus img{
+        width: 300px;
+        height: 350px;
+        border-radius: 0;
+   
+    }
+
+    .aboutdetail{
+        margin-left: 90px;
+        width: 50%;
+     
+      
+      
+    }
+
+
+    .aboutdetail h2{
+        font-size: 50px;
+        margin-top: 10px;
+
+    }
+
+    .aboutdetail p{
+        font-size: 15px;
+      
+    }
+
+    .tittle{
+        margin-left: 120px;
+     
+    }
+
+    .sandwith img{
+        width: 350px;
+        height: 250px;
+     
+    }
+
+    .sandwith{
+        margin-left: -80px;
+    }
+
+    .menu h2{
+        font-size: 21px;
+    }
+
+    .foodbox{
+        height: 380px;
+        width: 300px;
+        margin-left: 20px;
+     
+    }
+
+    .foodbox img{
+        width: 220px;
+        height: 200px;
+        margin-left: 5px;
+     
+    }
+
+    .foodbox h3{
+        font-size: 20px;
+    }
+
+    .star{
+        font-size: 8px;
+    }
+
+    .foodbox h4{
+        font-size: 20px;
+    }
+
+    .btn3{
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-top: 0;
+     
+    }
+
+    .orderimage{
+        margin-left: 0px;
+    }
+
+    .galleryimage{
+        margin-left: 10px;
+     
+    }
+
+    .galleryimage img{
+        width: 180px;
+        height: 120px;
+    }
+
+    .orderform{
+      
+        width: 300px;
+        height: 500px;
+        margin-left: -50px;
+       
+    }
+
+    .orderimage{
+        margin-left: 0px;
+    }
+
+    .orderimage img{
+        width: 300px;
+        height: 500px;
+        
+    }
+
+    .box{
+        width: 85%;
+        height: 25px;
+    }
+
+    footer{
+        width: 100%;
+
+    }
+
+    .footerbox{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+    }
+
+
+    .footerbox h3{
+        font-size: 20px;
+    }
+
+    .footerbox a{
+        font-size: 12px;
+    }
+
+    .line1{
+        margin-left: 5px;
+
+    }
+
+    .copyright{
+       
+     text-align: center;
+     
+   }
+
+
+
+
+
+
+
+        
+
+       }
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+</style>
+  <body>
+    <header>
+ 
+        <i class="fa-solid fa-utensils"></i>
+        <h2>We Belive Good Food Offer Great Smile</h2>
+   
+          
+           <div class="topnav" id="myTopnav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#popular">Popular</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#order">Order</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+      
+        </header>
+
+        <section class="home" id="home">
+        
+            <div class="pizza">
+       
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1/3</div>
+                    <img src="./allimage/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden.jpg" >
+                    <div class="captiontext">Delicious Food</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2/3</div>
+                    <img src="./allimage/top-view-table-full-delicious-food-composition.jpg">
+                    <div class="captiontext">Delicious Food 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3/3</div>
+                    <img src="./allimage/top-view-table-full-delicious-food.jpg">
+                    <div class="captiontext">Delicious Food 2</div>
+                </div>
+
+            </div>
+
+            <br>
+            <div style="text-align: center">
+                <spam class="dot"></spam>
+                <spam class="dot"></spam>
+                <spam class="dot"></spam>
+            </div>
+
+
+            
+            <h1>Enjoy Your Testy And Health Consious Food & Fast Food With Us!! </h1>
+            <button class="btn" id="myButton">Get Strated</button>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <div class="container">
+            <div class="aboutus">
+                <img src="./allimage/restaurant-interior.jpg">
+            </div>
+
+            <div class="aboutdetail">
+                <h2>About Us</h2>
+                <p>At R&R Restaurant, we believe that dining is not just about food; it's about creating an experience that tantalizes your taste buds, warms your heart, and leaves you with lasting memories. Nestled in the heart of Kuala Lumpur, our restaurant is a culinary haven where passion and flavor collide.</p>
+                <p>Step through our doors and embark on a gastronomic journey where every dish tells a story. Whether you're here for a casual brunch, a romantic dinner, or a celebration with friends, we strive to make every moment special. Our attentive staff is here to ensure that your dining experience exceeds expectations, leaving you eager to return for more.</p>
+                <p>Thank you for choosing R&R Restaurant as your dining destination. We look forward to serving you and creating moments that linger on your palate and in your memories.</p>
+                <button class="btn1" id="myButton">Learn More</button>
+            </div>
+
+        </div>
+    </section>
+
+   <section class="menu" id="menu">
+    <div class="tittle">
+        <h1>Our Delicious <span>Menu</span></h1>
+    </div>
+    <div class="line"></div>
+    <div class="catagory">
+        <button class="btn2">Breakfast</button>
+        <button class="btn2">Lunch</button>
+        <button class="btn2">Dinner</button>
+        <button class="btn2">Desert</button>
+    </div>
+    <div class="line"></div>
+
+    <div class="container">
+        <div class="sandwith">
+            <img src="./allimage/club-sandwich-with-ham-lettuce-tomato-cheese-fries-wooden-board.jpg" id="myImg" alt="sandwith" >
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        </div>
+
+       
+
+        <div class="menu">
+            <h2>Garlic Parmesan Fries</h2>
+            <p>Crispy fries tossed in garlic butter and Parmesan, served with a zesty aioli.</p>
+            <h2>Caprese Salad Skewers</h2>
+            <p>Fresh mozzarella, cherry tomatoes, and basil drizzled with balsamic glaze.</p>
+            <h2>Lobster Bisque</h2>
+            <p>Creamy lobster soup garnished with chives and a hint of sherry.</p>
+            <h2>Chocolate Lava Cake</h2>
+            <p>Decadent chocolate cake with a gooey molten center, served with vanilla bean ice cream.</p>
+            <h2>Shrimp Scampi Linguine</h2>
+            <p>Sautéed shrimp, garlic, cherry tomatoes, and spinach in a white wine butter sauce.</p>
+        </div>
+
+    </div>
+    
+   </section>
+
+   <section class="popular" id="popular">
+    <div class="tittle">
+        <h1>Most <span>Popular</span> Foods</h1>
+    </div>
+
+    <div class="container">
+        <div class="foodbox">
+            <img src="./allimage/fried-chicken-wings-with-fish-sauce-sweet-fish-sauce.jpg">
+            <h3>Fried Chicken Wings</h3>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>RM28</h4>
+            <button class="btn3">Add To Cart</button>
+        </div>
+        <div class="foodbox">
+           <img src="./allimage/fish-chips-chopping-board-with-lemon.jpg">
+           <h3>Fish And Chips</h3>
+           <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>RM26</h4>
+        <button class="btn3">Add To Cart</button>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="foodbox">
+            <img src="./allimage/cooked-italian-pasta-with-shrimps-greens-lemon-inside-brown-plate-grey.jpg">
+            <h3>Italian Pasta With Strimps</h3>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>RM20</h4>
+            <button class="btn3">Add To Cart</button>
+        </div>
+        <div class="foodbox">
+            <img src="./allimage/side-view-double-cheeseburger-with-grilled-beef-patties-cheese-lettuce-leaf-burger-buns.jpg">
+            <h3>Double Cheeseburger</h3>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>RM45</h4>
+            <button class="btn3">Add To Cart</button>
+        </div>
+    </div>
+
+   </section>
+
+   <section class="gallery" id="gallery">
+    <div class="tittle">
+        <h1>Our Food <span>Gallery</span></h1>
+    </div>
+    <div class="container">
+        <div class="galleryimage">
+            <img src="./allimage/chocolate-brownie-cake-piece-stack-plate-homemade-pastries.jpg">
+            <div class="overlay">
+               <div class="text">
+                 Chocolate Brownie
+               </div>
+            </div>
+        </div>
+
+        <div class="galleryimage">
+            <img src="./allimage/top-view-thanksgiving-roasted-chicken-dish-with-lemon-slices.jpg">
+            <div class="overlay">
+                <div class="text">Roasted Chicken</div>
+            </div>
+        </div>
+
+        <div class="galleryimage">
+            <img src="./allimage/top-view-veal-meat-sauce-pita-bread-with-vegetable-salad.jpg">
+            <div class="overlay">
+                <div class="text">Meat Sauce Pita Bread</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="galleryimage">
+            <img src="./allimage/high-view-roscon-de-reyes-epiphany-dessert.jpg">
+            <div class="overlay">
+               <div class="text">Epiphany Dessert</div>
+            </div>
+        </div>
+
+        <div class="galleryimage">
+            <img src="./allimage/pork-satay-with-peanut-sauce-sweet-sour-sauce-thai-food.jpg">
+            <div class="overlay">
+               <div class="text">Sour Sauce Thai Food</div>
+            </div>
+        </div>
+
+        <div class="galleryimage">
+            <img src="./allimage/grilled-beef-steak-with-fries-grilled-tomato-pepper-sauces.jpg">
+            <div class="overlay">
+               <div class="text">Grilled Beef Stalk</div>
+            </div>
+        </div>
+    </div>
+
+
+   </section>
+
+   <section class="order" id="order">
+
+    <div class="tittle">
+        <h1>Make An <span>Order</span></h1>
+    </div>
+
+    <div class="container">
+        <div class="orderform">
+            <form>
+                <input type="text" placeholder="Name" class="box" required>
+                <input type="email" placeholder="Email" class="box" required> 
+                <input type="number" placeholder="Phone Number" class="box" required>
+                <input type="text" placeholder="Order" class="box" required>
+                <textarea name="address" class="address" placeholder="Address" ></textarea>
+                <input type="submit" value="Order Now" class="btn4">
+            </form>
+
+        </div>
+
+        <div class="orderimage">
+            <img src="./allimage/fried-meat-potatoes-home-wooden-board.jpg">
+        </div>
+        
+    </div>
+
+   </section>
+
+   <footer>
+
+    <div class="container1">
+        <div class="footerbox">
+            <h3>Contact Info</h3>
+            <a href="#"><i class="fa-solid fa-location-dot"></i>  Kuala Lumpur</a><br>
+            <a href="#"><i class="fa-solid fa-envelope"></i>  chanxiauthong0126@gmail.com</a><br>
+            <a href="#"><i class="fa-solid fa-phone"></i>  0123456789</a><br>
+        </div>
+        <div class="footerbox">
+            <h3>Branch Location</h3>
+            <a href="#">Subang</a><br>
+            <a href="#">Petaling Jaya</a><br>
+            <a href="#">Damansara</a><br>
+        </div>
+
+        <div class="footerbox">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a><br>
+            <a href="#about">About</a><br>
+            <a href="#menu">Menu</a><br>
+            <a href="#popular">Popular</a><br>
+            <a href="#gallery">Gallery</a><br>
+            <a href="#order">Order</a><br>
+
+        </div>
+
+        <div class="footerbox">
+            <h3>Follow Us On!</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/chan.xiauthong" title="facebook" target="_blank">Facebook</a></li>
+              <li><a href="https://www.instagram.com/xiauthong/" title="Instagram" target="_blank">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/in/xiauthong-chan-05a014294/" title="LinkedIn" target="_blank">LinkedIn</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+    <div class="line1"></div>
+    <div class="copyright">
+     <p>Copyright @2023 & Copy All Right Reserved By Renee❤️</p>
+    </div>
+
+   </footer>
+   
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+
+        //get the modal
+        var modal=document.getElementById("myModal");
+
+        //get the image and insert it inside the modal- use its "alt" text as a caption
+        var img=document.getElementById("myImg") ;
+        var modalImg=document.getElementById("img01");
+        var captionText=document.getElementById("caption");
+        img.onclick=function(){
+            modal.style.display="block";
+            modalImg.src=this.src;
+            captionText.innerHTML=this.alt;
+        }
+        //get the <spam> element that closes the modal
+        var span=document.getElementsByClassName("close")[0];
+
+        //when the user clicks on <span> (x),close the modal
+        span.onclick=function(){
+            modal.style.display="none";
+        }
+
+
+
+        function handleClick() {
+        alert("Okay!");
+        // You can add more code here to perform other actions
+    }
+
+    // Get the button element by its ID
+    var myButton = document.getElementById("myButton");
+
+    // Attach the handleClick function to the button's click event
+    myButton.addEventListener("click", handleClick);
+
+     
+
+    </script>
+        
+
+  </body>
+
+ 
+</html>
